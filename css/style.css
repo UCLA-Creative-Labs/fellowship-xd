@@ -79,23 +79,32 @@ body {
   color: black;
   text-align: center; 
 }
+  #mainTitle .labs {
+    animation-delay: .21s;
+    animation-duration: 5s;
+  }
+  #mainTitle span {
+    font-size: 100px;
+    margin: 0; 
+    animation: blink 6s infinite;
+  }
   #mainTitle h1 {
     font-size: 100px;
     margin: 0; 
-    animation: blink 12s .5s infinite;
+    animation: blink 6s infinite;
   }
   #mainTitle div {
     text-align: center;
     width: 100%;
     left: 50%;
     height: 5px;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: var(--base-color);
     box-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
     margin: 0;
     margin-bottom: 27px; 
     /* animation: open 4.5s cubic-bezier(.15,0,0,1.03) forwards;       */
-    animation: open 4.5s cubic-bezier(.32,.05,0,.47) forwards;  
+    animation: open 5.5s cubic-bezier(.32,.05,0,.47) forwards;  
   }
   @keyframes open {
     0%   { 
@@ -110,9 +119,55 @@ body {
   #mainTitle h2 {
     font-size: 30px;
     font-weight: bold; 
-    animation: blink 12s 1s infinite;
+    animation: blink 4s .37s infinite;
   }
   @keyframes blink {
+    10%,
+    15%,
+    24%,
+    27%,
+    29%,
+    65% {
+      color: #111;
+      text-shadow: none;
+    }
+    0%,
+    8%,
+    12%,
+    14%,
+    18%,
+    22%,
+    25%,
+    26%,
+    28%,
+    31%,
+    64%,
+    66%,
+    100% {
+      text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
+      color: var(--base-color);
+    }
+  }
+  @keyframes blinkcl {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
+      color: var(--base-color);
+    }
+  }
+  @keyframes blinktxt {
     20%,
     24%,
     55% {
@@ -161,7 +216,7 @@ body {
   transition: all .25s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
-.loaded #mainTitle>h1, .loaded #mainTitle>h2{
+.loaded #mainTitle>h1, .loaded #mainTitle>h2, .loaded #mainTitle>span{
   animation: none !important;
 }
 .loaded #mainTitle>div{

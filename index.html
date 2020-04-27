@@ -8,9 +8,17 @@
 <link rel="shortcut icon" type="image/png" href="assets/img/icon.png"/>
 <script src="https://use.fontawesome.com/30bd8482aa.js"></script>
 <script>
+	// console.log(document.readyState);
+	// console.time("loaded");
+	// document.addEventListener("DOMContentLoaded", ready);
+	// function ready(){
+	// 	console.log(document.readyState);
+	// 	console.timeEnd("loaded");
+	// }
+	console.log(window.performance.timing)
 	setTimeout(()=>{
 		document.body.classList.add("loaded");
-	}, 5000);
+	}, 6000);
 </script>
 <head>
 	<title>Creative Labs</title>
@@ -63,6 +71,7 @@
 	<a id="survey" href="https://forms.gle/izY4Aau1zj7KHDFj8" target="_blank">
 		<div id="mainTitle">
 			<h1 class="mod-text title">Creative Labs</h1>
+			<!-- <span class="mod-text title" >Creative </span><span class="mod-text title labs" >Labs</span> -->
 			<div></div>
 			<h2 class="mod-text calibre">
 				learn to create.
