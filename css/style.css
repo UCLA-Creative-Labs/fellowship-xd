@@ -122,27 +122,10 @@ body {
     animation: blink 4s .37s infinite;
   }
   @keyframes blink {
-    10%,
-    15%,
-    24%,
-    27%,
-    29%,
-    65% {
+    10%,15%,24%,27%,29%,65% {
       opacity: 0;
     }
-    0%,
-    8%,
-    12%,
-    14%,
-    18%,
-    22%,
-    25%,
-    26%,
-    28%,
-    31%,
-    64%,
-    66%,
-    100% {
+    0%,8%,12%,14%,18%,22%,25%,26%,28%,31%,64%,66%,100% {
       opacity: 1;
     }
   }
@@ -155,19 +138,20 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1000;
+  background: #000000;
 }
 
-#loader-wrapper #loader-section {
+/* #loader-wrapper #loader-section {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
+  
   z-index: 1000;
-  -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(0);  /* IE 9 */
-  transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
-}
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);  
+  transform: translateX(0);  
+} */
 
 /* After Load */
 .loaded #loader-wrapper {
