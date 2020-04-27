@@ -7,6 +7,11 @@
 <link type="text/css" rel="stylesheet" href="assets/fonts/Brandon-Text-web/stylesheet.css"/>
 <link rel="shortcut icon" type="image/png" href="assets/img/icon.png"/>
 <script src="https://use.fontawesome.com/30bd8482aa.js"></script>
+<script>
+	setTimeout(()=>{
+		document.body.classList.add("loaded");
+	}, 5000);
+</script>
 <head>
 	<title>Creative Labs</title>
 </head>
@@ -60,12 +65,15 @@
 			<i class="fa fa-envelope ui" aria-hidden="true"></i>
 		</a>
 	</div> -->
+	<div id="loader-wrapper">
+		<div id="loader-section"></div>
+	</div>
 	<a id="survey" href="https://forms.gle/izY4Aau1zj7KHDFj8" target="_blank">
 		<div id="mainTitle">
-			<h1 class="title">Creative Labs</h1>
+			<h1 class="mod-text title">Creative Labs</h1>
 			<div></div>
 			<h2 class="mod-text calibre">
-				Fresh, fun, good for you.
+				learn to create.
 			</h2>
 		</div>
 		<div id="container"></div>
