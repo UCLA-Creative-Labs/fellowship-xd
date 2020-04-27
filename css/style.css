@@ -24,7 +24,7 @@ body {
 
 .title {
   font-family: "Fugue";
-  font-weight: normal; }
+  font-weight: bold; }
 
 .austin {
   font-family: "Austin Cyr";
@@ -32,7 +32,7 @@ body {
 
 .calibre {
   font-family: "Calibre";
-  font-weight: normal; }
+  font-weight: bold; }
 
 .bodyText {
   font-family: "Brandon Text";
@@ -109,7 +109,7 @@ body {
 }
   #mainTitle h2 {
     font-size: 30px;
-    font-weight: lighter; 
+    font-weight: bold; 
     animation: blink 12s 1s infinite;
   }
   @keyframes blink {
