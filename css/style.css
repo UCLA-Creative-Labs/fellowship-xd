@@ -101,9 +101,8 @@ body {
     height: 5px;
     border-radius: 20px;
     background-color: var(--base-color);
-    box-shadow: 0 0 10px var(--shadow-one), 0px 0px 15px var(--shadow-one), 0px 0px 20px var(--shadow-one), 0px 0px 40px var(--shadow-one), 0px 0px 60px var(--shadow-two), 0px 0px 10px var(--shadow-two), 0px 0px 98px var(--shadow-two);
+    box-shadow: 0 0 10px var(--shadow-one), 0px 0px 15px var(--shadow-one), 0px 0px 18px var(--shadow-one), 0px 0px 20px var(--shadow-one), 0px 0px 25px var(--shadow-two), 0px 0px 2px var(--shadow-two);
     margin: 0;
-    margin-bottom: 27px; 
     animation: open 5.5s cubic-bezier(.32,.05,0,.47) forwards;  
   }
   @keyframes open {
