@@ -12,7 +12,7 @@ function init() {
     var e = document.getElementById("container");
     (renderer = new THREE.WebGLRenderer({
         antialias: !0
-    })).shadowMap.enabled = !0, renderer.shadowMap.type = THREE.PCSoftShadowMap, renderer.setPixelRatio(window.devicePixelRatio), renderer.setSize(window.innerWidth, window.innerHeight), renderer.setClearColor(12576767), e.appendChild(renderer.domElement), (camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 1, 1e3)).position.set(0, 0, 75), scene = new THREE.Scene;
+    })).shadowMap.enabled = !0, renderer.shadowMap.type = THREE.PCSoftShadowMap, renderer.setPixelRatio(window.devicePixelRatio), renderer.setSize(window.innerWidth, window.innerHeight), renderer.setClearColor(`#000000`), e.appendChild(renderer.domElement), (camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 1, 1e3)).position.set(0, 0, 75), scene = new THREE.Scene;
     var t = new THREE.HemisphereLight(16575228, 0, .8),
         a = new THREE.DirectionalLight(16777215, .5);
     a.position.set(150, 75, 150);

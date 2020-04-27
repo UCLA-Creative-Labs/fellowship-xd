@@ -76,7 +76,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
   text-align: center; 
 }
   #mainTitle .labs {
@@ -100,10 +99,9 @@ body {
     height: 5px;
     border-radius: 20px;
     background-color: var(--base-color);
-    box-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
+    box-shadow: 0 0 10px var(--shadow-one), 0px 0px 15px var(--shadow-one), 0px 0px 20px var(--shadow-one), 0px 0px 40px var(--shadow-one), 0px 0px 60px var(--shadow-two), 0px 0px 10px var(--shadow-two), 0px 0px 98px var(--shadow-two);
     margin: 0;
     margin-bottom: 27px; 
-    /* animation: open 4.5s cubic-bezier(.15,0,0,1.03) forwards;       */
     animation: open 5.5s cubic-bezier(.32,.05,0,.47) forwards;  
   }
   @keyframes open {
@@ -148,44 +146,6 @@ body {
       color: var(--base-color);
     }
   }
-  @keyframes blinkcl {
-    20%,
-    24%,
-    55% {
-      color: #111;
-      text-shadow: none;
-    }
-    0%,
-    19%,
-    21%,
-    23%,
-    25%,
-    54%,
-    56%,
-    100% {
-      text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
-      color: var(--base-color);
-    }
-  }
-  @keyframes blinktxt {
-    20%,
-    24%,
-    55% {
-      color: #111;
-      text-shadow: none;
-    }
-    0%,
-    19%,
-    21%,
-    23%,
-    25%,
-    54%,
-    56%,
-    100% {
-      text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
-      color: var(--base-color);
-    }
-  }
 
 /* loader */
 #loader-wrapper {
@@ -218,10 +178,8 @@ body {
 
 .loaded #mainTitle>h1, .loaded #mainTitle>h2, .loaded #mainTitle>span{
   animation: none !important;
-}
-.loaded #mainTitle>div{
-  background-color: black !important;
-  box-shadow: none !important;
+  text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
+  color: var(--base-color);
 }
 
 /*# sourceMappingURL=style.css.map */
