@@ -1,7 +1,8 @@
 var camera, scene, renderer, gui, composer, group, models = ["apple", "starfruit"],
     geomData = [],
     matData = [],
-    mouse = new THREE.Vector2;
+    mouse = new THREE.Vector2,
+    rotX = 0, rotY = 0, posX = 0, posY = 0;
 
 function resize() {
     camera.aspect = window.innerWidth / window.innerHeight, camera.updateProjectionMatrix(), renderer.setSize(window.innerWidth, window.innerHeight)
@@ -52,15 +53,25 @@ function init() {
         d.scale.set(m, m, m), d.position.set(Math.random() - .5, Math.random() - .5, Math.random() - .5).normalize(), d.position.multiplyScalar(200 * Math.random()), d.rotation.set(2 * Math.random(), 2 * Math.random(), 2 * Math.random()), group.add(d)
     }
     scene.add(group), window.addEventListener("resize", resize)
+    e.addEventListener('mousemove', getRotation)
 }
 
 function update() {
-    group.rotation.y += .0015, group.rotation.z += .001
+    group.rotation.y += .0015+rotX, group.rotation.z += .001+rotY
+    group.position.x += posX, group.position.y += posY
 }
 
 function animate() {
     update(), renderer.render(scene, camera), window.requestAnimationFrame(animate)
 }
+
+function getRotation(e) {
+    rotX = e.movementX / 50000
+    rotY = e.movementY / 50000
+    posX = e.movementX / 100
+    posY = -e.movementY / 100
+}
+
 THREE.DefaultLoadingManager.onLoad = function() {
     init(), animate()
 };
