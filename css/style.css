@@ -77,6 +77,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center; 
+  text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
+  color: var(--base-color);
 }
   #mainTitle .labs {
     animation-delay: .21s;
@@ -126,8 +128,7 @@ body {
     27%,
     29%,
     65% {
-      color: #111;
-      text-shadow: none;
+      opacity: 0;
     }
     0%,
     8%,
@@ -142,8 +143,7 @@ body {
     64%,
     66%,
     100% {
-      text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
-      color: var(--base-color);
+      opacity: 1;
     }
   }
 
@@ -178,12 +178,10 @@ body {
 
 .loaded #mainTitle>h1, .loaded #mainTitle>h2 {
   animation: none;
-  text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
-  color: var(--base-color);
 }
 
 .loaded #mainTitle>h2{
-  animation: glitch 3s linear infinite !important;
+  animation: glitch 4s linear infinite !important;
 }
 
 @keyframes glitch{
@@ -194,8 +192,7 @@ body {
   29%,
   65%,
   92%{
-    color: #111;
-    text-shadow: none;
+    opacity: 0;
   }
   0%,
   8%,
@@ -212,8 +209,7 @@ body {
   90%,
   94%,
   100% {
-    text-shadow: 0 0 5px var(--shadow-one), 0 0 15px var(--shadow-one), 0 0 20px var(--shadow-one), 0 0 40px var(--shadow-one), 0 0 60px var(--shadow-two), 0 0 10px var(--shadow-two), 0 0 98px var(--shadow-two);
-    color: var(--base-color);
+    opacity: 1;
   }
   2%,64%{
     transform: translate(2px,0) skew(0deg);
