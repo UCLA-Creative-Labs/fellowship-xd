@@ -8,13 +8,19 @@
 <link rel="shortcut icon" type="image/png" href="assets/img/icon.png"/>
 <script src="https://use.fontawesome.com/30bd8482aa.js"></script>
 <script>
-	const list = ["learn to create.", "click on the screen.","create. create. create.","build cool shit.", "i love arjun.", "bryan was here."];
-	let iter = 1;
+	const list = ["learn to create.","create. create. create.","build cool shit.", "i love arjun.", "bryan was here."];
+	let iter = 0;
+	function glitch(){
+		document.getElementById("glitch").textContent=list[iter];
+		setTimeout(()=>{document.getElementById("glitch").textContent="click on the screen.";}, 1500)
+		setTimeout(()=>{document.getElementById("glitch").textContent=list[iter];}, 3500)
+	}
 	setTimeout(()=>{
 		document.body.classList.add("loaded");
-		setInterval(() => {
-			document.getElementById("glitch").textContent=list[iter];
-			iter = iter == list.length-1 ? 0 : iter+1;
+		glitch();
+		setInterval(()=>{
+			glitch();
+			// iter = iter == list.length-1 ? 0 : iter+1;
 		}, 4000);
 	}, 6000);	
 </script>
@@ -44,7 +50,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-76234348-1');
 </script>
 </html>
