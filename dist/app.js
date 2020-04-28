@@ -20,8 +20,8 @@ function init() {
     n.castShadow = !1, n.intensity = .2, n.position.set(-150, 75, -150);
     var o = a.clone();
     o.castShadow = !1, o.intensity = .1, o.position.set(0, 125, 0), scene.add(t), scene.add(a), scene.add(n), scene.add(o), geomData.push(new THREE.SphereGeometry(1, 64, 64)), geomData.push(new THREE.BoxGeometry(1, 1, 1)), geomData.push(new THREE.ConeGeometry(1, 1, 32)), geomData.push(new THREE.TetrahedronGeometry(1)), geomData.push(new THREE.TorusKnotGeometry(1, .4, 64, 64)), matData.push(new THREE.MeshStandardMaterial({
-        color: 16579127,
-        emissive: 12403221,
+        color: "#ff8a24",
+        emissive: "#ffd952",
         metalness: .5,
         flatShading: !1,
         roughness: .06
@@ -32,14 +32,14 @@ function init() {
         flatShading: !1,
         metalness: 0
     })), matData.push(new THREE.MeshStandardMaterial({
-        color: 12491335,
-        emissive: 6777125,
+        color: "#f24138",
+        emissive: "#f255a1",
         roughness: .16,
         flatShading: !1,
         metalness: 0
     })), matData.push(new THREE.MeshStandardMaterial({
-        color: 11793035,
-        emissive: 6849567,
+        color: "#b660f0",
+        emissive: "#5d55f2",
         metalness: .5,
         flatShading: !1,
         roughness: .06
@@ -49,8 +49,8 @@ function init() {
         var s = geomData[Math.floor(Math.random() * geomData.length)],
             i = matData[Math.floor(Math.random() * matData.length)],
             d = new THREE.Mesh(s, i),
-            m = 4 + 10 * Math.random();
-        d.scale.set(m, m, m), d.position.set(Math.random() - .5, Math.random() - .5, Math.random() - .5).normalize(), d.position.multiplyScalar(200 * Math.random()), d.rotation.set(2 * Math.random(), 2 * Math.random(), 2 * Math.random()), group.add(d)
+            m = 4 + 2 * Math.random();
+        d.scale.set(m, m, m), d.position.set(5*Math.random(6584) - 2.5, 5*Math.random(1984) - 2.5, 4*Math.random(5468) - 2).normalize(), d.position.multiplyScalar(200 * Math.random()), d.rotation.set(2 * Math.random(), 2 * Math.random(), 2 * Math.random()), group.add(d)
     }
     scene.add(group), window.addEventListener("resize", resize)
     e.addEventListener('mousemove', getRotation)
