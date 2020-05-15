@@ -12,8 +12,8 @@
 	let iter = 0;
 	function glitch(){
 		document.getElementById("glitch").textContent=list[iter];
-		setTimeout(()=>{document.getElementById("glitch").textContent="fresh, fun, and good for you";}, 3000)
-		setTimeout(()=>{document.getElementById("glitch").textContent=list[iter];}, 6000)
+		setTimeout(()=>{document.getElementById("glitch").textContent="fresh, fun, and good for you";}, 2000)
+		setTimeout(()=>{document.getElementById("glitch").textContent=list[iter];}, 4000)
 	}
 	setTimeout(()=>{
 		document.body.classList.add("loaded");
@@ -21,7 +21,7 @@
 		setInterval(()=>{
 			glitch();
 			// iter = iter == list.length-1 ? 0 : iter+1;
-		}, 4000);
+		}, 6000);
 	}, 6000);	
 </script>
 <head>
